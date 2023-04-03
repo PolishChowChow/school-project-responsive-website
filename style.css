@@ -1,0 +1,219 @@
+:root{
+    --light: #F6F1F1;
+    --shadow: #ddd;
+    font-size: 16px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Roboto Slab', serif;
+}
+h1{
+    margin-left: 3rem;
+    font-size: 2rem;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 3 10px rgba(0,0,0,1);
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    padding: 2rem;
+    list-style-type: none;
+    transition: all .2s ease-in-out;
+}
+nav ul li:hover{
+    background-color: var(--shadow);
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+nav > a{
+    display: none;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
+    height: 3rem;
+    width: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav > a span{
+    display: block;
+    color: black;
+    background-color: black;
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+}
+main{
+    padding: 0;
+    margin: auto;
+}
+article{
+    padding: 150px 0;
+}
+button{
+    display: block;
+    width: 250px;
+    height: 60px;
+}
+article .container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    font-size: 1.5rem;
+}
+.container > div{
+    flex: 1;
+}
+.container > div > img{
+    width: 90%;
+    height: 90%;
+}
+.container.reverse{
+    flex-direction: row-reverse;
+}
+#article-1{
+    background-color: var(--light);
+}
+#article-3{
+    background-color: var(--light);
+}
+#article-4{
+    background-color: black;
+    color: white;
+    padding: 250px 100px;
+}
+#article-4 > .container.join-us{
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    text-align: center;
+    font-size: 3rem;
+}
+#article-4 .container.join-us button{
+    font-size: 1rem;
+    font-weight: 600;
+    border: 3px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    transition: .2s ease-in-out;
+}
+#article-4 .container.join-us button:hover{
+    color: black;
+    background-color: white;
+}
+#article-contact{
+    text-align: center;
+    background-color: var(--light);
+}
+#article-contact .container{
+    flex-direction: column;
+}
+#article-contact p,#article-contact h3{
+    margin: 5px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    font-size: 1.5rem;
+    gap: .75rem;
+}
+input, textarea{
+    border: none;
+    border-radius: 10px;
+    background-color: #EEE;
+    outline-color: #6262ff;
+    font-size: 1rem;
+    padding: 15px 20px;
+}
+form button{
+    font-size: 1rem;
+    font-weight: 600;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    transition: .2s ease-in-out;
+}
+form button:hover{
+    color: white;
+    background-color: black;
+}
+button:focus-visible{
+    color: pink;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    padding: 20px;
+}
+textarea,input{
+    font-size: 1.5rem;
+}
+@media screen and (max-width:1360px){
+    article{
+        padding: 100px 0;
+    }
+    article .container{
+        width: 90%;
+    }
+    #article-4{
+        padding: 100px 0;
+    }
+}
+@media screen and (max-width:1060px){
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    nav ul li{
+        text-align: center;
+    }
+    nav ul.active{
+        display: flex;
+    }
+    
+    nav > a{
+        display: flex;
+    }
+    .container,.container.reverse{
+        text-align: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:600px) {
+    article#article-4 .container.join-us{
+        font-size: 2rem;
+    }
+}
